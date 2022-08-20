@@ -1,10 +1,14 @@
 package com.riken.wiki.controller;
 
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@ComponentScan("com.riken")
+import java.util.Map;
+
+
 @RestController
 public class TestController {
 
@@ -21,9 +25,14 @@ public class TestController {
      @RequestMapping(value="/user/1 , method = RequestMethod.Get)
      */
 
-    @RequestMapping("/hello")
+    @GetMapping("/hello")
     public String hello(){
         return "hello World";
+    }
+
+    @PostMapping("/hello/post")
+    public String helloPost(String name){
+        return "hello World,Post" + name;
     }
 
 }
