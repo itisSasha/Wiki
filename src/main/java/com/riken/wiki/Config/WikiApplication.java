@@ -1,4 +1,4 @@
-package com.riken.wiki;
+package com.riken.wiki.Config;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
