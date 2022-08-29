@@ -14,3 +14,6 @@ const app = createApp(App);
     for(const i in icons){
         app.component(i,icons[i]);
     }
+
+    console.log("環境", process.env.NODE_ENV);
+    console.log("サーバー", process.env.VUE_APP_SERVER);
