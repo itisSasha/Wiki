@@ -1,5 +1,6 @@
 package com.riken.wiki.service;
 
+import com.github.pagehelper.PageHelper;
 import com.riken.wiki.domain.Ebook;
 import com.riken.wiki.domain.EbookExample;
 import com.riken.wiki.mapper.EbookMapper;
@@ -19,6 +20,7 @@ public class EbookService {
     private EbookMapper ebookMapper;
 
     public List<EbookResp> list(EbookReq req){
+        PageHelper.startPage(1,3);
         EbookExample ebookExample = new EbookExample();
 //        Criteriaはwhereの意味
         EbookExample.Criteria criteria = ebookExample.createCriteria();
